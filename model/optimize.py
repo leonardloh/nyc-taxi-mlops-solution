@@ -11,5 +11,5 @@ def _optimize_ints(df):
     df[ints] = df[ints].apply(pd.to_numeric, downcast='integer')
     return df
 
-def optimize(df):
+def optimize_floats_ints(df):
     return _optimize_floats(_optimize_ints(df))

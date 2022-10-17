@@ -13,7 +13,7 @@ import logging
 def main():
     training_pipeline_instance = training_pipeline(
         training_data_loader = data_loaders.get_train_test_df(),
-        training_data_preprocessor = data_preprocessing.preprocess_data(),
+        training_data_preprocessor = data_preprocessing.preprocess_training_data(),
         trainer = trainers.xgb_trainer_mlflow(),
         evaluator = evaluators.evaluator(),
         deployment_trigger = deployment_triggers.deployment_trigger(),
