@@ -26,7 +26,7 @@ def predictor(
     data: pd.DataFrame,
 ) -> Output(predictions=np.ndarray):
     """Run a inference request against a prediction service"""
-    service.start(timeout=10)  # should be a NOP if already started
+    # service.start(timeout=10)  # should be a NOP if already started
     prediction = service.predict(data.to_numpy())
     # prediction = prediction.argmax(axis=-1)
     logging.info(f"Prediction is: {prediction}")
